@@ -3,8 +3,8 @@ FROM node:lts-alpine3.12
 WORKDIR /usr/app
 COPY package*.json ./
 
-RUN npm install
+RUN yarn install
 COPY . .
 
 EXPOSE 3000
-CMD [ "npm", "dev" ]
+CMD [ "yarn", "start" ]
